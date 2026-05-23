@@ -3,83 +3,83 @@ const path = require("path");
 
 // Fonctions de traduction (identiques à Next.js)
 const getProjectTypeLabel = (type) => {
-    const types = {
-        web: 'Site Web / E-commerce',
-        mobile: 'Application Mobile',
-        saas: 'Plateforme SaaS',
-        design: 'Design & UX/UI',
-        spfx: 'Microsoft SPFx Solutions',
-        'power-automate': 'Power Automate Workflows',
-        'power-bi': 'Power BI Reporting Dashboards',
-        'microsoft-project': 'Microsoft Project PMO Installation',
-    };
-    return types[type] || type || 'Non spécifié';
+  const types = {
+    web: 'Site Web / E-commerce',
+    mobile: 'Application Mobile',
+    saas: 'Plateforme SaaS',
+    design: 'Design & UX/UI',
+    spfx: 'Microsoft SPFx Solutions',
+    'power-automate': 'Power Automate Workflows',
+    'power-bi': 'Power BI Reporting Dashboards',
+    'microsoft-project': 'Microsoft Project PMO Installation',
+  };
+  return types[type] || type || 'Non spécifié';
 };
 
 const getBudgetLabel = (budget) => {
-    const budgets = {
-        '5k-15k': '5 000 $ - 15 000 $',
-        '15k-50k': '15 000 $ - 50 000 $',
-        '50k+': '50 000 $ +',
-    };
-    return budgets[budget] || budget || 'Non spécifié';
+  const budgets = {
+    '5k-15k': '5 000 $ - 15 000 $',
+    '15k-50k': '15 000 $ - 50 000 $',
+    '50k+': '50 000 $ +',
+  };
+  return budgets[budget] || budget || 'Non spécifié';
 };
 
 const getTimelineLabel = (timeline) => {
-    const timelines = {
-        urgent: 'Urgent (moins d\'un mois)',
-        '1-3': '1 à 3 mois',
-        '5-12': '5 à 12 mois',
-    };
-    return timelines[timeline] || timeline || 'Non spécifié';
+  const timelines = {
+    urgent: 'Urgent (moins d\'un mois)',
+    '1-3': '1 à 3 mois',
+    '5-12': '5 à 12 mois',
+  };
+  return timelines[timeline] || timeline || 'Non spécifié';
 };
 
 const sendEmail = async (req, res) => {
-    try {
-        const {
-            firstName,
-            lastName,
-            email,
-            phone,
-            company,
-            projectType,
-            budget,
-            timeline,
-            message,
-            newsletter,
-        } = req.body;
+  try {
+    const {
+      firstName,
+      lastName,
+      email,
+      phone,
+      company,
+      projectType,
+      budget,
+      timeline,
+      message,
+      newsletter,
+    } = req.body;
 
-        // Validation des champs obligatoires
-        if (!firstName || !lastName || !email || !projectType || !message) {
-            return res.status(400).json({
-                success: false,
-                message: "Champs obligatoires manquants",
-            });
-        }
+    // Validation des champs obligatoires
+    if (!firstName || !lastName || !email || !projectType || !message) {
+      return res.status(400).json({
+        success: false,
+        message: "Champs obligatoires manquants",
+      });
+    }
 
-        // Configuration du transporteur email
-        const transporter = nodemailer.createTransport({
-            host: process.env.EMAIL_HOST,
-            port: Number(process.env.EMAIL_PORT),
-            secure: true, // true si port 465
-            auth: {
-                user: process.env.EMAIL_USER_NEXOLIA,
-                pass: process.env.EMAIL_PASS_NEXOLIA,
-            },
-            tls: {
-                rejectUnauthorized: false,
-            },
-        });
+    // Configuration du transporteur email
+    const transporter = nodemailer.createTransport({
+      host: process.env.EMAIL_HOST,
+      port: Number(process.env.EMAIL_PORT),
+      secure: true, // true si port 465
+      auth: {
+        user: process.env.EMAIL_USER_NEXOLIA,
+        pass: process.env.EMAIL_PASS_NEXOLIA,
+      },
+      tls: {
+        rejectUnauthorized: false,
+      },
+    });
 
-        // Vérification de la configuration SMTP
-        await transporter.verify();
+    // Vérification de la configuration SMTP
+    await transporter.verify();
 
-        // Template email administrateur (version complète avec logo)
-        const adminMailOptions = {
-            from: `"NEXOLIA Consulting" <${process.env.EMAIL_USER_NEXOLIA}>`,
-            to: process.env.EMAIL_USER_NEXOLIA,
-            subject: `📬 Nouvelle demande de contact - ${firstName} ${lastName}`,
-            html: `
+    // Template email administrateur (version complète avec logo)
+    const adminMailOptions = {
+      from: `"NEXOLIA Consulting" <${process.env.EMAIL_USER_NEXOLIA}>`,
+      to: process.env.EMAIL_USER_NEXOLIA,
+      subject: `📬 Nouvelle demande de contact - ${firstName} ${lastName}`,
+      html: `
         <!DOCTYPE html>
         <html lang="fr">
         <head>
@@ -321,21 +321,21 @@ const sendEmail = async (req, res) => {
         </body>
         </html>
       `,
-            attachments: [
-                {
-                    filename: 'logoNexo.png',
-                    path: path.join(__dirname, '../public/logoNexo.png'),
-                    cid: 'logoNexolia'
-                }
-            ]
-        };
+      attachments: [
+        {
+          filename: 'logoNexo.png',
+          path: path.join(process.cwd(), 'public', 'logoNexo.png'),
+          cid: 'logoNexolia'
+        }
+      ]
+    };
 
-        // Template email client (version complète avec logo)
-        const clientMailOptions = {
-            from: `"NEXOLIA Consulting" <${process.env.EMAIL_USER_NEXOLIA}>`,
-            to: email,
-            subject: '✨ Confirmation de votre demande - NEXOLIA Consulting',
-            html: `
+    // Template email client (version complète avec logo)
+    const clientMailOptions = {
+      from: `"NEXOLIA Consulting" <${process.env.EMAIL_USER_NEXOLIA}>`,
+      to: email,
+      subject: '✨ Confirmation de votre demande - NEXOLIA Consulting',
+      html: `
         <!DOCTYPE html>
         <html lang="fr">
         <head>
@@ -558,34 +558,34 @@ const sendEmail = async (req, res) => {
         </body>
         </html>
       `,
-            attachments: [
-                {
-                    filename: 'logoNexo.png',
-                    path: path.join(__dirname, '../public/logoNexo.png'),
-                    cid: 'logoNexolia'
-                }
-            ]
-        };
+      attachments: [
+        {
+          filename: 'logoNexo.png',
+          path: path.join(__dirname, '../public/logoNexo.png'),
+          cid: 'logoNexolia'
+        }
+      ]
+    };
 
-        // Envoyer les deux emails
-        await transporter.sendMail(adminMailOptions);
-        await transporter.sendMail(clientMailOptions);
+    // Envoyer les deux emails
+    await transporter.sendMail(adminMailOptions);
+    await transporter.sendMail(clientMailOptions);
 
-        return res.status(200).json({
-            success: true,
-            message: 'Emails envoyés avec succès'
-        });
+    return res.status(200).json({
+      success: true,
+      message: 'Emails envoyés avec succès'
+    });
 
-    } catch (error) {
-        console.error('Erreur détaillée:', error);
-        return res.status(500).json({
-            success: false,
-            message: 'Erreur lors de l\'envoi des emails',
-            error: error.message
-        });
-    }
+  } catch (error) {
+    console.error('Erreur détaillée:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Erreur lors de l\'envoi des emails',
+      error: error.message
+    });
+  }
 };
 
 module.exports = {
-    sendEmail,
+  sendEmail,
 };
