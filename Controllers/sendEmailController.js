@@ -427,7 +427,7 @@ const sendEmail = async (req, res) => {
     console.error('❌ Erreur détaillée:', error);
     return res.status(500).json({
       success: false,
-      message: 'Erreur lors de l\'envoi des emails',
+      message: 'Erreurs lors de l\'envoi des emails',
       error: error.message
     });
   }
