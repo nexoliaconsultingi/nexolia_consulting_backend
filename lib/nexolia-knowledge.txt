@@ -1,0 +1,201 @@
+================================================================================
+DOCUMENTATION OFFICIELLE – NEXOLIA CONSULTING (Mise à jour 2026)
+================================================================================
+
+1. IDENTITÉ DE L’ENTREPRISE
+--------------------------------------------------------------------------------
+Nexolia Consulting est une agence IT et un cabinet conseil basé en Tunisie et en France, spécialisé dans la transformation digitale, le développement de solutions sur mesure (web, mobile, SaaS, ERP) et l’accompagnement stratégique.
+
+- Création officielle : 2025 (startup), mais les fondateurs travaillent sur le projet depuis 2020.
+- Localisation : Pôle Technique El Ghazela, Rue de la Technologie, El Ghazela, Ariana, Tunisie.
+- Horaires d’ouverture : Lundi au Vendredi de 8h00 à 17h00. Samedi 10h-14h. Dimanche fermé.
+- Support technique : 24/7 pour les urgences, assistance jusqu’à 20h en semaine.
+- Téléphone : +216 23 267 646 | +216 92 233 647 (WhatsApp Business)
+- Emails : contact@nexolia-consulting.com (commercial), support@nexolia-consulting.com (technique)
+- Site web : www.nexolia-consulting.com
+
+Chiffres clés :
+- +150 entreprises transformées (ou +200 clients satisfaits selon les pages)
+- 98% de satisfaction client
+- +120 projets livrés
+- 5x ROI moyen pour les clients
+- 24/7 support dédié
+
+Certifications : RGPD, ISO 27001, TOGAF, PMP, Scrum Agile, Microsoft Certified, ISTQB, Adobe Designer, Harvard CS50.
+
+Partenaires (logos cités) : Opalia Pharma, STB, Délice, ISET Kébili, SOTETEL, MG, Tunisair.
+
+================================================================================
+2. SERVICES ET SOLUTIONS
+--------------------------------------------------------------------------------
+Nexolia Consulting propose des solutions innovantes et sur mesure, réparties en plusieurs catégories :
+
+A. Développement Web & Digital
+   - Site Vitrine Standard : design responsive, pages présentation, formulaire de contact, SEO basique, optimisation mobile, intégration réseaux sociaux.
+   - Enterprise Website (Premium) : UI/UX premium, CMS dynamique, multi-langues, blog professionnel, SEO avancé, haute performance.
+   - Custom Website Solution : architecture sur mesure, expérience utilisateur personnalisée, intégrations API, automatisation avancée, modules métier, infrastructure scalable.
+
+B. Applications Web & Mobile
+   - Applications web modernes (React, Next.js, Node.js, etc.)
+   - Applications mobiles natives ou cross-platform (React Native, Flutter, Swift, Kotlin)
+   - Progressive Web Apps (PWA)
+
+C. Solutions SaaS
+   - Plateformes SaaS scalables et sécurisées pour startups et PME/PMI.
+   - Exemple : SaaS Gestion Financière PME (dashboard analytique, prédiction IA, multi-sociétés).
+
+D. E-commerce
+   - Plateforme e-commerce intelligente avec paiement Stripe, authentification MFA, dashboard admin, SEO optimisé (SSR Next.js).
+
+E. Dashboards & Analytics (Power BI)
+   - Tableaux de bord interactifs, indicateurs KPI temps réel, reporting financier, aide à la décision.
+   - Exemple : Dashboard Power BI Finance (analyse des revenus, charges, bénéfices, tendances).
+
+F. Workflow & Automatisation
+   - Automatisation des processus métier via Power Automate, n8n, etc.
+
+G. Microsoft Solutions & Power Platform
+   - Optimisation de Microsoft 365 (Teams, SharePoint, Exchange)
+   - Power Apps, Power Automate, Power BI, Dataverse
+   - SharePoint Framework (SPFx) pour solutions personnalisées
+   - Microsoft Project Server & EPPM (gestion de portefeuille projets)
+
+H. ERP sur Mesure
+   - Gestion intégrée (finance, RH, stock, ventes, patients, etc.)
+   - Exemples : ERP Geld Pilot (gestion financière avec prédictions IA), ERP Gestion Cabinet Médical, ERP RH (développé en 2024).
+
+I. Design & Expérience (UI/UX)
+   - Design graphique, montage vidéo, identité visuelle complète (logo, charte, cartes de visite, flyers, kit branding à partir de 499$).
+
+J. Conseil & Audit
+   - Audit technologique, refonte d’architecture legacy, conseil stratégique, mise en place de PMO, gestion du changement.
+
+K. Infrastructure & Gouvernance
+   - Installation réseaux, cloud hybride (AWS, Azure, OVHcloud), sécurisation, conformité RGPD, CI/CD, conteneurisation (Docker, Kubernetes).
+
+================================================================================
+3. PROCESSUS DE DÉVELOPPEMENT (MÉTHODOLOGIE AGILE)
+--------------------------------------------------------------------------------
+Nexolia suit un processus itératif en 9 étapes (ou 5 étapes principales selon les pages) :
+
+1. Étude détaillée de votre besoin (découverte & analyse)
+2. Proposition de notre vision stratégique (définition de l’architecture technique)
+3. Création d’une maquette visuelle (prototypage UX/UI)
+4. Établissement du devis sur mesure
+5. Bon de commande avec acompte de 50%
+6. Développement en approche agile (sprints, validation client à chaque étape)
+7. Livraison intermédiaire – 25% avant déploiement
+8. Déploiement + formation des équipes
+9. 25% final à la clôture + support TMA (maintenance)
+
+Variante résumée (méthodologie agile certifiée) :
+- Analyse des besoins → Proposition d’architecture → Développement itératif (le client vérifie et valide étape par étape) → Accompagnement & formation → Support haute disponibilité 24/7.
+
+Bénéfices : livraison continue, collaboration étroite, qualité garantie, ROI optimisé, time-to-market réduit de 50%.
+
+================================================================================
+4. OFFRES PROMOTIONNELLES ET TARIFS INDICATIFS
+--------------------------------------------------------------------------------
+- Offre exceptionnelle : Audit et devis GRATUIT + 3 mois de maintenance offerts.
+- Pack Identité Visuelle Complet : à partir de 499$.
+- Création Site Web & Lancement Digital (promo) : à partir de 790$ (design offert + SEO + hébergement gratuit 1 an).
+- ERP & Digitalisation : sur devis (analyse gratuite + développement + consulting + suivi).
+- Atelier Innovation offert pour toute solution de digitalisation ou ERP.
+- MVP en 30 jours : audit gratuit, accompagnement prioritaire.
+
+Les prix définitifs sont toujours établis sur devis personnalisé selon les besoins. Nexolia propose des solutions adaptées à tout budget.
+
+================================================================================
+5. TECHNOLOGIES MAÎTRISÉES (STACK)
+--------------------------------------------------------------------------------
+Front-End : React, Next.js, TypeScript, Vue.js, Angular, Tailwind CSS.
+Back-End : Node.js, Python, Java, PHP, GraphQL, Express.js.
+Bases de données : MongoDB, PostgreSQL, SQL Server, Dataverse.
+Mobile : React Native, Flutter, Swift, Kotlin.
+Cloud & DevOps : AWS, Azure, OVHcloud, Docker, Kubernetes, Jenkins, Terraform, Ansible.
+Microsoft : Microsoft 365, Power Automate, Power BI, SharePoint, Power Apps, Dataverse, Project Server.
+Infrastructure & Réseau : Cisco, Linux, VMware, Zaabix (monitoring).
+IA & Data : Python (IA prédictive), Power BI, chatbots intelligents.
+
+================================================================================
+6. PROJETS RÉALISÉS (PORTFOLIO)
+--------------------------------------------------------------------------------
+- Geld Pilot (ERP financier) : Power Apps, Power Automate, SPFx, Node.js, Flask Python, Dataverse. Gestion clients, factures, prévisions IA, dashboard Power BI temps réel.
+- ERP Gestion Cabinet Médical : React, Node.js, PostgreSQL, Power BI. Patients, rendez-vous, médicaments, personnel.
+- Solution Salon de Coiffure : React, Node.js, MongoDB, réservation, gestion produits et personnel.
+- SaaS Gestion Financière PME : React, Node.js, PostgreSQL, Power BI, IA. Multi-sociétés.
+- Application Mobile Université : React Native, Firebase, Node.js, Python IA. Cours, classes, suivi personnalisé.
+- Expert Déménagement Tunisie : Next.js, React, Node.js, MongoDB, JWT, reCAPTCHA, signature électronique, dashboard admin.
+- Dashboard Power BI Finance : Power BI, SQL Server, DAX, Azure. KPI financiers temps réel.
+- Plateforme E-Commerce Intelligente : Next.js, Node.js, Stripe, MFA, Prisma, Redis, Docker, SSR SEO.
+
+Indicateurs : +128 projets, +96 clients, 100% succès.
+
+================================================================================
+7. ÉQUIPE DIRIGEANTE ET CERTIFICATIONS
+--------------------------------------------------------------------------------
+- Mohamed Wahbi Salwej : CEO & Digital Transformation Consultant (PMP certified, Microsoft, Power BI, SEO).
+- Zayneb Kawana : Responsable Commerciale & RH.
+- Houda Jaeeaya : Head Of Marketing & Coach (NLP, Enneagram, e-commerce).
+- Abed Ejlil Chbil : Administrateur Systèmes & Réseaux Senior (CCNA, CCNA Data Center, 15+ ans banque).
+- Alaa Landolsi : Responsable UI/UX & Web Designer (Adobe Certified).
+- Mahmoud Bousbih : Senior Full-Stack JS Developer (React, Next.js, Node.js, React Native).
+
+Certifications d’équipe : TOGAF, Scrum Agile Practitioner, Harvard CS50, Microsoft Power Platform, ISTQB, Adobe Designer.
+
+================================================================================
+8. LOCALISATION ET ACCÈS
+--------------------------------------------------------------------------------
+Adresse : Pôle Technique El Ghazela, Rue de la Technologie, El Ghazela, Ariana, Tunisie.
+Accès : Station TGM Tunis Marine (10 min taxi), Bus ligne 20 (arrêt El Ghazela), navette depuis Ariana Ville.
+Parking gratuit (100 places). Voir sur Google Maps / Waze.
+
+================================================================================
+9. FOIRE AUX QUESTIONS (FAQ)
+--------------------------------------------------------------------------------
+Q : Pourquoi faire confiance à Nexolia ?
+R : Plus de 10 ans d’expertise en data visualisation et développement sur mesure. +50 clients satisfaits, 100% sur mesure.
+
+Q : Combien coûte un dashboard sur mesure ?
+R : Le coût dépend de la complexité et des sources de données. Contactez-nous pour un devis gratuit.
+
+Q : Combien de temps pour développer un projet complet ?
+R : Selon l’ampleur, de quelques semaines (ex: MVP 30 jours) à plusieurs mois (ERP complexe). Nous livrons par itérations agiles.
+
+Q : Travaillez-vous avec les startups ?
+R : Oui, nous accompagnons les startups avec des solutions SaaS évolutives et des offres adaptées (MVP rapide, audit gratuit).
+
+Q : Proposez-vous des formations ?
+R : Oui, formation certifiante PMP, MS Project, Power BI, etc. (ex: formation MS Project très bien structurée – témoignage client).
+
+Réponse garantie sous 24h (par email ou formulaire).
+
+================================================================================
+10. CONTACT ET FORMULAIRE
+--------------------------------------------------------------------------------
+Pour toute demande de devis gratuit ou d’information :
+- Formulaire en ligne sur la page Contact (prénom, nom, email, téléphone, entreprise, type de projet, budget, délai, description).
+- Téléphone : +216 23 267 646 (ligne directe) / +216 92 233 647 (WhatsApp urgence).
+- Email commercial : contact@nexolia-consulting.com (réponse < 2h).
+- Email support technique : support@nexolia-consulting.com (réponse < 1h).
+- Temps de réponse moyen : ~5 min via WhatsApp.
+
+Heures de permanence téléphonique : 24/7 pour urgences.
+
+================================================================================
+11. AVIS CLIENTS (TÉMOIGNAGES)
+--------------------------------------------------------------------------------
+- Emani wefi (Sfax) : "Formation MS Project très bien structurée. J’ai pu maîtriser la planification de projets efficacement." ★★★★★
+- Nicolas Rousseau (France) : "Application mobile rapide et intuitive. L’équipe est très professionnelle et à l’écoute." ★★★★☆
+- Fatima Zahra (Nabeul) : "Très bon site web optimisé SEO. Le design est moderne et les performances sont excellentes." ★★★★★
+- Hamza tborski (Hammamet) : "Super dashboard Power BI qui nous aide à prendre de meilleures décisions grâce aux données en temps réel." ★★★★★
+
+================================================================================
+12. VALEURS ET ENGAGEMENTS
+--------------------------------------------------------------------------------
+Innovation continue, excellence client, intégrité & transparence, esprit d’équipe, résultats mesurables, impact positif.
+Engagement : satisfaction client prioritaire, solutions adaptatives à tout budget, professionnalisme et ponctualité, support réactif.
+
+================================================================================
+FIN DE LA DOCUMENTATION OFFICIELLE
+================================================================================

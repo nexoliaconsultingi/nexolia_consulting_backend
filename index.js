@@ -21,7 +21,7 @@ const cors = require('cors');
 // const factureRoute = require ("./Routes/FactureRoute")
 
 const sendEmailRoute = require("./Routes/sendEmailRoute");
-
+const chatRoute = require("./Routes/chatRoute");
 
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
@@ -57,6 +57,8 @@ app.use(cors({
 
 app.use("/send-email/api", sendEmailRoute);
 
+
+app.use("/chat/api", chatRoute);
 
 
 //test
