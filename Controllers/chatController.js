@@ -1,4 +1,4 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const askAI = require("../services/aiService");
 const fs = require("fs");
 const path = require("path");
 
@@ -25,11 +25,6 @@ const chatWithAI = async (req, res) => {
       return res.status(400).json({ error: "Message requis" });
     }
 
-    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-    const model = genAI.getGenerativeModel({
-      model: "gemini-2.5-flash",
-    });
-
     const knowledge = getKnowledge();
 
     const prompt = `
@@ -39,11 +34,12 @@ Documentation :
 ${knowledge}
 
 Client: ${message}
+
 Réponse:
 `;
 
-    const result = await model.generateContent(prompt);
-    const response = await result.response.text();
+    // Utilise Gemini puis Groq en fallback automatique
+    const response = await askAI(prompt);
 
     res.json({ reply: response });
 
