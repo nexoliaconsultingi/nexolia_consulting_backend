@@ -63,7 +63,7 @@ app.use("/chat/api", chatRoute);
 
 //test
 app.get('/', (req, res) => {
-  res.send('✅ Backend Nexolia-Medica opérationnel.');
+  res.send('✅ Backend Nexolia-Consulting opérationnel.');
 });
 
 
