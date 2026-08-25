@@ -21,6 +21,25 @@ const userSchema = new mongoose.Schema({
         trim: true,
         minlength: 8
     },
+    access: {
+        type: [{
+            type: String,
+            enum: ['admin', 'store', 'erp', 'academy']
+        }],
+        default: ['admin'],
+        validate: {
+            validator: (arr) => Array.isArray(arr) && arr.length > 0,
+            message: 'User must have at least one access role'
+        }
+    },
+    lastLoginAt: {
+        type: Date,
+        default: null
+    },
+    lastSeenAt: {
+        type: Date,
+        default: null
+    },
 }
 , {
     timestamps: true
@@ -34,6 +53,9 @@ function registerVerify(obj) {
         name: Joi.string().trim().min(2).max(100).required(),
         email: Joi.string().trim().min(5).max(100).required().email(),
         password: Joi.string().trim().min(8).required(),
+        access: Joi.array().items(
+            Joi.string().valid('admin', 'store', 'erp', 'academy')
+        ).min(1).required(),
     });
     return schema.validate(obj);
 }
@@ -53,8 +75,22 @@ function loginVerify(obj) {
 
 
 
+// Vérification de la mise à jour d'un utilisateur (tous les champs optionnels)
+function updateUserVerify(obj) {
+    const schema = Joi.object({
+        name: Joi.string().trim().min(2).max(100),
+        email: Joi.string().trim().min(5).max(100).email(),
+        password: Joi.string().trim().min(8),
+        access: Joi.array().items(
+            Joi.string().valid('admin', 'store', 'erp', 'academy')
+        ).min(1),
+    });
+    return schema.validate(obj);
+}
+
 module.exports = {
     User,
     registerVerify,
-    loginVerify
+    loginVerify,
+    updateUserVerify
 };
