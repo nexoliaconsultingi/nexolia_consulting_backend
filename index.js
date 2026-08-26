@@ -14,7 +14,7 @@ initSocket(server);
 
 
 // Imported Routes Nexolia-Medica :
-// const authRoute = require("./Routes/authRoute");
+const authRoute = require("./Routes/authRoute");
 // const visitorRoute = require("./Routes/visitorRoute");
 // const partnersRoute = require("./Routes/GastionWebSiteSectionsRoutes/PartnerRoute");
 // const videoRoute = require("./Routes/GastionWebSiteSectionsRoutes/VideoRoute");
@@ -30,22 +30,22 @@ initSocket(server);
 
 const sendEmailRoute = require("./Routes/sendEmailRoute");
 const chatRoute = require("./Routes/chatRoute");
-// const fournisseurRoute = require("./Routes/fournisseurRoute");
-// const depotRoute = require("./Routes/depotRoute");
-// const zoneRoute = require("./Routes/zoneRoute");
-// const productRoute = require("./Routes/productRoute");
-// const categoryRoute = require("./Routes/categoryRoute");
-// const flashOfferRoute = require("./Routes/flashOfferRoute");
-// const packageRoute = require("./Routes/packageRoute");
-// const giftRoute = require("./Routes/giftRoute");
-// const clientRoute = require("./Routes/clientRoute");
-// const newsletterRoute = require("./Routes/newsletterRoute");
-// const storeVideoRoute = require("./Routes/storeVideoRoute");
-// const storeStatusRoute = require("./Routes/storeStatusRoute");
-// const discountCodeRoute = require("./Routes/discountCodeRoute");
-// const orderRoute = require("./Routes/orderRoute");
-// const deliveryAgencyRoute = require("./Routes/deliveryAgencyRoute");
-// const companyRoute = require("./Routes/companyRoute");
+const fournisseurRoute = require("./Routes/fournisseurRoute");
+const depotRoute = require("./Routes/depotRoute");
+const zoneRoute = require("./Routes/zoneRoute");
+const productRoute = require("./Routes/productRoute");
+const categoryRoute = require("./Routes/categoryRoute");
+const flashOfferRoute = require("./Routes/flashOfferRoute");
+const packageRoute = require("./Routes/packageRoute");
+const giftRoute = require("./Routes/giftRoute");
+const clientRoute = require("./Routes/clientRoute");
+const newsletterRoute = require("./Routes/newsletterRoute");
+const storeVideoRoute = require("./Routes/storeVideoRoute");
+const storeStatusRoute = require("./Routes/storeStatusRoute");
+const discountCodeRoute = require("./Routes/discountCodeRoute");
+const orderRoute = require("./Routes/orderRoute");
+const deliveryAgencyRoute = require("./Routes/deliveryAgencyRoute");
+const companyRoute = require("./Routes/companyRoute");
 
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
@@ -63,7 +63,7 @@ app.use(cors({
 
 
 // Path routes Nexolia-Medica : 
-// app.use("/user/api",authRoute);
+app.use("/user/api",authRoute);
 // app.use("/visitorAnalytics/api", visitorRoute);
 // app.use("/partner/api", partnersRoute);
 // app.use("/video/api", videoRoute);
@@ -86,22 +86,22 @@ app.use("/chat/api", chatRoute);
 
 
 // Path routes Store :
-// app.use("/store/api/fournisseur", fournisseurRoute);
-// app.use("/store/api/depot", depotRoute);
-// app.use("/store/api/zone", zoneRoute);
-// app.use("/store/api/product", productRoute);
-// app.use("/store/api/category", categoryRoute);
-// app.use("/store/api/flashoffer", flashOfferRoute);
-// app.use("/store/api/package", packageRoute);
-// app.use("/store/api/gift", giftRoute);
-// app.use("/store/api/client", clientRoute);
-// app.use("/store/api/newsletter", newsletterRoute);
-// app.use("/store/api/video", storeVideoRoute);
-// app.use("/store/api/status", storeStatusRoute);
-// app.use("/store/api/discountcode", discountCodeRoute);
-// app.use("/store/api/order", orderRoute);
-// app.use("/store/api/deliveryagency", deliveryAgencyRoute);
-// app.use("/company/api", companyRoute);
+app.use("/store/api/fournisseur", fournisseurRoute);
+app.use("/store/api/depot", depotRoute);
+app.use("/store/api/zone", zoneRoute);
+app.use("/store/api/product", productRoute);
+app.use("/store/api/category", categoryRoute);
+app.use("/store/api/flashoffer", flashOfferRoute);
+app.use("/store/api/package", packageRoute);
+app.use("/store/api/gift", giftRoute);
+app.use("/store/api/client", clientRoute);
+app.use("/store/api/newsletter", newsletterRoute);
+app.use("/store/api/video", storeVideoRoute);
+app.use("/store/api/status", storeStatusRoute);
+app.use("/store/api/discountcode", discountCodeRoute);
+app.use("/store/api/order", orderRoute);
+app.use("/store/api/deliveryagency", deliveryAgencyRoute);
+app.use("/company/api", companyRoute);
 
 
 //test
