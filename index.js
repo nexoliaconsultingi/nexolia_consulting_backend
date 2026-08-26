@@ -29,7 +29,7 @@ initSocket(server);
 // const factureRoute = require ("./Routes/FactureRoute")
 
 const sendEmailRoute = require("./Routes/sendEmailRoute");
-// const chatRoute = require("./Routes/chatRoute");
+const chatRoute = require("./Routes/chatRoute");
 // const fournisseurRoute = require("./Routes/fournisseurRoute");
 // const depotRoute = require("./Routes/depotRoute");
 // const zoneRoute = require("./Routes/zoneRoute");
@@ -82,7 +82,7 @@ app.use(cors({
 app.use("/send-email/api", sendEmailRoute);
 
 
-// app.use("/chat/api", chatRoute);
+app.use("/chat/api", chatRoute);
 
 
 // // Path routes Store :
