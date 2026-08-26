@@ -7,7 +7,7 @@
   },
   "author": "",
   "engines": {
-    "node": "18.20.6"
+    "node": "20.20.2"
   },
   "license": "ISC",
   "description": "",
