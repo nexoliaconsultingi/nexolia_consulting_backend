@@ -125,7 +125,7 @@ app.use((err, req, res, next) => {
 
 
 
-  const port =process.env.PORT;
+  const port =process.env.PORT || 3320;
 
   server.listen(port, () => {
     console.log(`Server listening on http://localhost:${port}`);
