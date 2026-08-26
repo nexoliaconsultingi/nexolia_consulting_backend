@@ -29,23 +29,23 @@ initSocket(server);
 // const factureRoute = require ("./Routes/FactureRoute")
 
 const sendEmailRoute = require("./Routes/sendEmailRoute");
-const chatRoute = require("./Routes/chatRoute");
-// const fournisseurRoute = require("./Routes/fournisseurRoute");
-// const depotRoute = require("./Routes/depotRoute");
-// const zoneRoute = require("./Routes/zoneRoute");
-// const productRoute = require("./Routes/productRoute");
-// const categoryRoute = require("./Routes/categoryRoute");
-// const flashOfferRoute = require("./Routes/flashOfferRoute");
-// const packageRoute = require("./Routes/packageRoute");
-// const giftRoute = require("./Routes/giftRoute");
-// const clientRoute = require("./Routes/clientRoute");
-// const newsletterRoute = require("./Routes/newsletterRoute");
-// const storeVideoRoute = require("./Routes/storeVideoRoute");
-// const storeStatusRoute = require("./Routes/storeStatusRoute");
-// const discountCodeRoute = require("./Routes/discountCodeRoute");
-// const orderRoute = require("./Routes/orderRoute");
-// const deliveryAgencyRoute = require("./Routes/deliveryAgencyRoute");
-// const companyRoute = require("./Routes/companyRoute");
+// const chatRoute = require("./Routes/chatRoute");
+const fournisseurRoute = require("./Routes/fournisseurRoute");
+const depotRoute = require("./Routes/depotRoute");
+const zoneRoute = require("./Routes/zoneRoute");
+const productRoute = require("./Routes/productRoute");
+const categoryRoute = require("./Routes/categoryRoute");
+const flashOfferRoute = require("./Routes/flashOfferRoute");
+const packageRoute = require("./Routes/packageRoute");
+const giftRoute = require("./Routes/giftRoute");
+const clientRoute = require("./Routes/clientRoute");
+const newsletterRoute = require("./Routes/newsletterRoute");
+const storeVideoRoute = require("./Routes/storeVideoRoute");
+const storeStatusRoute = require("./Routes/storeStatusRoute");
+const discountCodeRoute = require("./Routes/discountCodeRoute");
+const orderRoute = require("./Routes/orderRoute");
+const deliveryAgencyRoute = require("./Routes/deliveryAgencyRoute");
+const companyRoute = require("./Routes/companyRoute");
 
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
@@ -82,26 +82,26 @@ app.use(cors({
 app.use("/send-email/api", sendEmailRoute);
 
 
-app.use("/chat/api", chatRoute);
+// app.use("/chat/api", chatRoute);
 
 
 // // Path routes Store :
-// app.use("/store/api/fournisseur", fournisseurRoute);
-// app.use("/store/api/depot", depotRoute);
-// app.use("/store/api/zone", zoneRoute);
-// app.use("/store/api/product", productRoute);
-// app.use("/store/api/category", categoryRoute);
-// app.use("/store/api/flashoffer", flashOfferRoute);
-// app.use("/store/api/package", packageRoute);
-// app.use("/store/api/gift", giftRoute);
-// app.use("/store/api/client", clientRoute);
-// app.use("/store/api/newsletter", newsletterRoute);
-// app.use("/store/api/video", storeVideoRoute);
-// app.use("/store/api/status", storeStatusRoute);
-// app.use("/store/api/discountcode", discountCodeRoute);
-// app.use("/store/api/order", orderRoute);
-// app.use("/store/api/deliveryagency", deliveryAgencyRoute);
-// app.use("/company/api", companyRoute);
+app.use("/store/api/fournisseur", fournisseurRoute);
+app.use("/store/api/depot", depotRoute);
+app.use("/store/api/zone", zoneRoute);
+app.use("/store/api/product", productRoute);
+app.use("/store/api/category", categoryRoute);
+app.use("/store/api/flashoffer", flashOfferRoute);
+app.use("/store/api/package", packageRoute);
+app.use("/store/api/gift", giftRoute);
+app.use("/store/api/client", clientRoute);
+app.use("/store/api/newsletter", newsletterRoute);
+app.use("/store/api/video", storeVideoRoute);
+app.use("/store/api/status", storeStatusRoute);
+app.use("/store/api/discountcode", discountCodeRoute);
+app.use("/store/api/order", orderRoute);
+app.use("/store/api/deliveryagency", deliveryAgencyRoute);
+app.use("/company/api", companyRoute);
 
 
 //test
