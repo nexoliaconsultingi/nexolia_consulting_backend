@@ -13,7 +13,7 @@ const offlineTimers = new Map();
 
 // Délai de grâce : si l'utilisateur se reconnecte avant ce délai (reload de la page),
 // aucune notification "hors ligne"/"en ligne" n'est émise
-const OFFLINE_GRACE_MS = parseInt(process.env.OFFLINE_GRACE_MS || '15000', 10);
+const OFFLINE_GRACE_MS = parseInt('15000', 10);
 
 let helpers = null;
 
