@@ -1,8 +1,8 @@
 const express = require('express');
 const {
-  registerCtel,
-  loginCtrl,
-  verifyCodeCtrl,
+  // registerCtel,
+  // loginCtrl,
+  // verifyCodeCtrl,
   // getMeCtrl,
   // getAllUsersCtrl,
   // createUserCtrl,
@@ -22,14 +22,14 @@ const {
 // const { protect, requireAccess } = require('../Middleware/authMiddleware');
 const router = express.Router();
 
-// register route :
-router.route('/register').post(registerCtel);
+// // register route :
+// router.route('/register').post(registerCtel);
 
-//Login route :
-router.route('/login').post(loginCtrl)
+// //Login route :
+// router.route('/login').post(loginCtrl)
 
-//Verification MFA Code mail
-router.route('/verify-code').post(verifyCodeCtrl)
+// //Verification MFA Code mail
+// router.route('/verify-code').post(verifyCodeCtrl)
 
 // // Current user profile (protected)
 // router.route('/me').get(protect, getMeCtrl)
