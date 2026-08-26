@@ -8,7 +8,7 @@ const nodemailer = require("nodemailer");
 const crypto = require("crypto");
 const Token_Secret = process.env.Token_Secret
 const { getSocket } = require("../socket");
-const { notifyUser, notifyAdmins } = require("../Services/notificationService");
+const { notifyUser, notifyAdmins } = require("../services/notificationService");
 
 
 
