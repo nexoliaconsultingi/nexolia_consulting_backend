@@ -11,14 +11,14 @@ const {
   heartbeatCtrl,
   logoutCtrl,
 } = require('../Controllers/authController');
-// const {
-//   getMyNotificationsCtrl,
-//   getUnreadCountCtrl,
-//   markReadCtrl,
-//   markAllReadCtrl,
-//   deleteNotificationCtrl,
-//   deleteAllNotificationsCtrl,
-// } = require('../Controllers/notificationController');
+const {
+  getMyNotificationsCtrl,
+  getUnreadCountCtrl,
+  markReadCtrl,
+  markAllReadCtrl,
+  deleteNotificationCtrl,
+  deleteAllNotificationsCtrl,
+} = require('../Controllers/notificationController');
 const { protect, requireAccess } = require('../Middleware/authMiddleware');
 const router = express.Router();
 
@@ -41,21 +41,21 @@ router.route('/heartbeat').post(protect, heartbeatCtrl)
 router.route('/logout').post(protect, logoutCtrl)
 
 // User management (admin only)
-// router.route('/users')
-//   .get(protect, requireAccess('admin'), getAllUsersCtrl)
-//   .post(protect, requireAccess('admin'), createUserCtrl)
-// router.route('/users/:id')
-//   .put(protect, requireAccess('admin'), updateUserCtrl)
-//   .delete(protect, requireAccess('admin'), deleteUserCtrl)
+router.route('/users')
+  .get(protect, requireAccess('admin'), getAllUsersCtrl)
+  .post(protect, requireAccess('admin'), createUserCtrl)
+router.route('/users/:id')
+  .put(protect, requireAccess('admin'), updateUserCtrl)
+  .delete(protect, requireAccess('admin'), deleteUserCtrl)
 
 // Notifications (protected)
-// router.route('/notifications')
-//   .get(protect, getMyNotificationsCtrl)
-//   .delete(protect, deleteAllNotificationsCtrl)
-// router.route('/notifications/unread-count').get(protect, getUnreadCountCtrl)
-// router.route('/notifications/read-all').put(protect, markAllReadCtrl)
-// router.route('/notifications/:id/read').put(protect, markReadCtrl)
-// router.route('/notifications/:id').delete(protect, deleteNotificationCtrl)
+router.route('/notifications')
+  .get(protect, getMyNotificationsCtrl)
+  .delete(protect, deleteAllNotificationsCtrl)
+router.route('/notifications/unread-count').get(protect, getUnreadCountCtrl)
+router.route('/notifications/read-all').put(protect, markAllReadCtrl)
+router.route('/notifications/:id/read').put(protect, markReadCtrl)
+router.route('/notifications/:id').delete(protect, deleteNotificationCtrl)
 
 // Example of a role-protected route (ERP only)
 router.route('/erp-only').get(protect, requireAccess('erp'), (req, res) => {
