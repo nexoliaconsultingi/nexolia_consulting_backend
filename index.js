@@ -106,7 +106,7 @@ app.use("/company/api", companyRoute);
 
 //test
 app.get('/', (req, res) => {
-  res.send('✅ Backend Nexolia-Consulting opérationnel *_*.');
+  res.send('✅ Backend Nexolia-Consulting opérationnel *_* yes.');
 });
 
 // Gestion des erreurs : toujours répondre en JSON (jamais une page HTML)
