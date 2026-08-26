@@ -14,7 +14,7 @@ initSocket(server);
 
 
 // Imported Routes Nexolia-Medica :
-// const authRoute = require("./Routes/authRoute");
+const authRoute = require("./Routes/authRoute");
 // const visitorRoute = require("./Routes/visitorRoute");
 // const partnersRoute = require("./Routes/GastionWebSiteSectionsRoutes/PartnerRoute");
 // const videoRoute = require("./Routes/GastionWebSiteSectionsRoutes/VideoRoute");
@@ -63,7 +63,7 @@ app.use(cors({
 
 
 // Path routes Nexolia-Medica : 
-// app.use("/user/api",authRoute);
+app.use("/user/api",authRoute);
 // app.use("/visitorAnalytics/api", visitorRoute);
 // app.use("/partner/api", partnersRoute);
 // app.use("/video/api", videoRoute);
@@ -106,7 +106,7 @@ app.use("/company/api", companyRoute);
 
 //test
 app.get('/', (req, res) => {
-  res.send('✅ Backend Nexolia-Consulting opérationnel *_* yes.');
+  res.send('✅ Backend Nexolia-Consulting opérationnel *_*');
 });
 
 // Gestion des erreurs : toujours répondre en JSON (jamais une page HTML)

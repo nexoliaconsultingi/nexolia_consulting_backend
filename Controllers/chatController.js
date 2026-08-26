@@ -1,4 +1,4 @@
-const askAI = require("../services/aiService");
+const askAI = require("../Services/aiService");
 const fs = require("fs");
 const path = require("path");
 
