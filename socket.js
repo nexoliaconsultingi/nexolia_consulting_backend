@@ -85,7 +85,7 @@ function initSocket(server) {
 
     // Notification uniquement pour une vraie nouvelle connexion (pas un reload)
     if (isFirstConnection && !hadPendingOffline) {
-      const { notifyAdmins } = require('./Services/notificationService');
+      const { notifyAdmins } = require('./services/notificationService');
       notifyAdmins({
         title: 'Utilisateur en ligne',
         message: `${userName} est en ligne le ${formatDateTime()}`,
@@ -110,7 +110,7 @@ function initSocket(server) {
             name: userName,
           });
 
-          const { notifyAdmins } = require('./Services/notificationService');
+          const { notifyAdmins } = require('./services/notificationService');
           notifyAdmins({
             title: 'Utilisateur hors ligne',
             message: `${userName} est hors ligne le ${formatDateTime()}`,

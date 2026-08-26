@@ -3,9 +3,11 @@ const Groq = require("groq-sdk");
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY,
-});
+let _groq = null;
+function getGroq() {
+  if (!_groq) _groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+  return _groq;
+}
 
 async function askAI(prompt) {
 
@@ -27,7 +29,7 @@ async function askAI(prompt) {
 
     console.log("🔄 Basculement vers Groq...");
 
-    const completion = await groq.chat.completions.create({
+    const completion = await getGroq().chat.completions.create({
       messages: [
         {
           role: "user",
