@@ -55,7 +55,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 //middlwaere :
 
 app.use(cors({
-  origin: [ "http://localhost:3000","http://localhost:3001","https://nexolia-consulting.com","https://api.nexolia-consulting.com","https://api.nexolia-consulting.com/chat/api","https://store.nexolia-consulting.com"],
+  origin: [ "http://localhost:3000","http://localhost:3001","https://nexolia-consulting.com","https://api.nexolia-consulting.com","https://api.nexolia-consulting.com/chat/api","https://store.nexolia-consulting.com","https://admin.nexolia-consulting.com","https://admin.nexolia-consulting.com/login"],
   methods: ['GET', 'POST','DELETE',"PUT","PATCH"],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
