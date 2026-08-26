@@ -23,13 +23,13 @@ const {
 const router = express.Router();
 
 // register route :
-router.route('/register').post(registerCtel);
+// router.route('/register').post(registerCtel);
 
 //Login route :
-router.route('/login').post(loginCtrl)
+// router.route('/login').post(loginCtrl)
 
 //Verification MFA Code mail
-router.route('/verify-code').post(verifyCodeCtrl)
+// router.route('/verify-code').post(verifyCodeCtrl)
 
 // // Current user profile (protected)
 // router.route('/me').get(protect, getMeCtrl)
