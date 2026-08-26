@@ -14,7 +14,7 @@ initSocket(server);
 
 
 // Imported Routes Nexolia-Medica :
-const authRoute = require("./Routes/authRoute");
+// const authRoute = require("./Routes/authRoute");
 // const visitorRoute = require("./Routes/visitorRoute");
 // const partnersRoute = require("./Routes/GastionWebSiteSectionsRoutes/PartnerRoute");
 // const videoRoute = require("./Routes/GastionWebSiteSectionsRoutes/VideoRoute");
@@ -28,7 +28,7 @@ const authRoute = require("./Routes/authRoute");
 // const newsRoute = require("./Routes/newsRoute");
 // const factureRoute = require ("./Routes/FactureRoute")
 
-// const sendEmailRoute = require("./Routes/sendEmailRoute");
+const sendEmailRoute = require("./Routes/sendEmailRoute");
 // const chatRoute = require("./Routes/chatRoute");
 // const fournisseurRoute = require("./Routes/fournisseurRoute");
 // const depotRoute = require("./Routes/depotRoute");
@@ -63,7 +63,7 @@ app.use(cors({
 
 
 // Path routes Nexolia-Medica : 
-app.use("/user/api",authRoute);
+// app.use("/user/api",authRoute);
 // app.use("/visitorAnalytics/api", visitorRoute);
 // app.use("/partner/api", partnersRoute);
 // app.use("/video/api", videoRoute);
@@ -79,7 +79,7 @@ app.use("/user/api",authRoute);
 
 
 
-// app.use("/send-email/api", sendEmailRoute);
+app.use("/send-email/api", sendEmailRoute);
 
 
 // app.use("/chat/api", chatRoute);
