@@ -1,7 +1,7 @@
 const asyncHandler = require("express-async-handler");
 const { User, registerVerify, loginVerify, updateUserVerify } = require("../Models/userModel");
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 require("dotenv").config()
 const nodemailer = require("nodemailer");
 
